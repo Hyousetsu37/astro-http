@@ -5,10 +5,12 @@ import { defineConfig } from "astro/config";
 
 import node from "@astrojs/node";
 
+import db from "@astrojs/db";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), db()],
   adapter: node({
     mode: "standalone",
   }),
